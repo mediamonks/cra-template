@@ -1,0 +1,21 @@
+{
+  "name": "cra-template-mm-base",
+  "version": "1.0.3",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript",
+    "mediamonks"
+  ],
+  "description": "The base MM template for Create React App.",
+  "main": "template.json",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.10"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
