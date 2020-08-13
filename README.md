@@ -29,7 +29,7 @@ yarn create create-react-app my-app --scripts-version @psimk/react-scripts --tem
 
 | Change                                                                       | Reasoning                                                                                                                                                              |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [MediaMonks eslint](https://github.com/mediamonks/frontend-coding-standards) | The existing eslint setup was changes with the MM version, in order to maintain the same standards across different projects and to make it easier to set up new ones. |
+| [MediaMonks eslint](https://github.com/mediamonks/frontend-coding-standards) | The existing eslint setup was changed with the MM version, in order to maintain the same standards across different projects and to make it easier to set up new ones. |
 | `start` renamed to `dev`                                                     | Again, this change was made in order to maintain cohesion between all of our projects.                                                                                 |
 
 ## License
