@@ -22,6 +22,18 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+
+  <!--
+      At the moment, this only works in Chromium browsers, where it will attempt to preload modules .
+    -->
+  <% for (var chunk in htmlWebpackPlugin.files.js) { %>
+  <% if(!htmlWebpackPlugin.files.js[chunk].includes("polyfill")) { %>
+  <link rel="modulepreload" href="<%= htmlWebpackPlugin.files.js[chunk]%>" />
+  <% } %>
+  <% } %>
+
+
   <title>MM react-skeleton App</title>
 </head>
 
@@ -38,6 +50,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+  <!--
+      This will split our js chunks into `nomodule` and standard variants
+      `nomodule` is used specifically for polyfills if they are configured in webpack.
+    -->
+  <% for (var chunk in htmlWebpackPlugin.files.js) { %>
+  <% if(htmlWebpackPlugin.files.js[chunk].includes("polyfill")) { %>
+  <script nomodule="" src="<%= htmlWebpackPlugin.files.js[chunk]%>"></script>
+  <% } else{ %>
+  <script src="<%= htmlWebpackPlugin.files.js[chunk]%>"></script>
+  <% } %>
+  <% } %>
 </body>
 
 </html>
