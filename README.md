@@ -22,10 +22,11 @@ yarn create create-react-app my-app --scripts-version @psimk/react-scripts --tem
 
 ## Differences to CRA
 
-| Addition           | Reasoning                                                                                                                                                                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| polyfill splitting | Modern browsers are used by at least 90% of our _general_ user base. In order to decrease loading times for these users, we load the polyfills only for browsers which need them. The polyfill chunk will only be loaded via `<script nomodule .../>`. |
-| `TYPE_CHECK` env   | There exist cases where we don't want webpack to constantly typecheck and alert us to typing errors/warnings. By default this flag is enabled and can be disabled by creating a `.env` file in the root of the project and adding `TYPE_CHECK=false`   |
+| Addition                           | Reasoning                                                                                                                                                                                                                                              |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Cypress](https://www.cypress.io/) | A modern E2E testing tool, essential for larger projects which have lots of moving parts                                                                                                                                                               |
+| polyfill splitting                 | Modern browsers are used by at least 90% of our _general_ user base. In order to decrease loading times for these users, we load the polyfills only for browsers which need them. The polyfill chunk will only be loaded via `<script nomodule .../>`. |
+| `TYPE_CHECK` env                   | There exist cases where we don't want webpack to constantly typecheck and alert us to typing errors/warnings. By default this flag is enabled and can be disabled by creating a `.env` file in the root of the project and adding `TYPE_CHECK=false`   |
 
 | Change                                                                       | Reasoning                                                                                                                                                              |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
