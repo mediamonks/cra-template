@@ -9,11 +9,18 @@
     "mediamonks"
   ],
   "description": "The base MM template for Create React App.",
-  "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psimk/cra-template-mm-base.git"
+  },
   "license": "MIT",
   "engines": {
-    "node": ">=8.10"
+    "node": ">=12"
   },
+  "bugs": {
+    "url": "https://github.com/psimk/cra-template-mm-base/issues"
+  },
+  "main": "template.json",
   "files": [
     "template",
     "template.json"
