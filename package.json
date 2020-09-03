@@ -1,5 +1,5 @@
 {
-  "name": "@mediamonks/cra-template-mm-base",
+  "name": "@mediamonks/cra-template",
   "version": "1.0.4",
   "keywords": [
     "react",
@@ -11,14 +11,14 @@
   "description": "The base MM template for Create React App.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mediamonks/cra-template-mm-base.git"
+    "url": "https://github.com/mediamonks/cra-template.git"
   },
   "license": "MIT",
   "engines": {
     "node": ">=12"
   },
   "bugs": {
-    "url": "https://github.com/mediamonks/cra-template-mm-base/issues"
+    "url": "https://github.com/mediamonks/cra-template/issues"
   },
   "main": "template.json",
   "files": [

@@ -1,7 +1,5 @@
 # Base MM Create React App Template
 
-> cra-template-mm-base
-
 ---
 
 ## Usage
@@ -11,13 +9,13 @@ This template is designed to be used together with our [custom react-scripts](ht
 > npx
 
 ```shell
-npx create-react-app my-app --scripts-version @mediamonks/react-scripts --template mm-base
+npx create-react-app my-app --scripts-version @mediamonks/react-scripts --template @mediamonks
 ```
 
 > yarn
 
 ```shell
-yarn create create-react-app my-app --scripts-version @mediamonks/react-scripts --template mm-base
+yarn create create-react-app my-app --scripts-version @mediamonks/react-scripts --template @mediamonks
 ```
 
 ## Differences to CRA
