@@ -6,18 +6,18 @@
 
 ## Usage
 
-This template is designed to be used together with our [custom react-scripts](https://github.com/psimk/create-react-app).
+This template is designed to be used together with our [custom react-scripts](https://github.com/mediamonks/create-react-app).
 
 > npx
 
 ```shell
-npx create-react-app my-app --scripts-version @psimk/react-scripts --template mm-base
+npx create-react-app my-app --scripts-version @mediamonks/react-scripts --template mm-base
 ```
 
 > yarn
 
 ```shell
-yarn create create-react-app my-app --scripts-version @psimk/react-scripts --template mm-base
+yarn create create-react-app my-app --scripts-version @mediamonks/react-scripts --template mm-base
 ```
 
 ## Differences to CRA
