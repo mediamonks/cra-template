@@ -15,7 +15,7 @@ npx create-react-app my-app --scripts-version @mediamonks/react-scripts --templa
 > yarn
 
 ```shell
-yarn create create-react-app my-app --scripts-version @mediamonks/react-scripts --template @mediamonks
+yarn create-react-app my-app --scripts-version @mediamonks/react-scripts --template @mediamonks
 ```
 
 ## Differences to CRA
