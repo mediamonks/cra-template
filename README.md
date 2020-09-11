@@ -18,6 +18,14 @@ npx create-react-app my-app --scripts-version @mediamonks/react-scripts --templa
 yarn create create-react-app my-app --scripts-version @mediamonks/react-scripts --template @mediamonks
 ```
 
+To use the deployment script add the following to your **package.json**:
+
+```json
+"config": {
+    "host": "replace_me_with_your_host_name",
+}
+```
+
 ## Differences to CRA
 
 | Addition                           | Reasoning                                                                                                                                                                                                                                              |
