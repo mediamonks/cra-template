@@ -5,6 +5,7 @@
 ## Usage
 
 This template is designed to be used together with our [custom react-scripts](https://github.com/mediamonks/create-react-app).
+It is meant to provide only the basic utilities and configuration of commonly used MM tools.
 
 > npx
 
