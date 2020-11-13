@@ -13,3 +13,7 @@ In general it is recommended to first implement a new feature in the `base` temp
 ```shell
 git merge-file standard/template.json .empty base/template.json
 ```
+
+## Versioning
+
+Versioning is handled by the `scripts/version.js` script, simply running it and passing it a version or a `minor | major | patch` will update all templates to that version.
