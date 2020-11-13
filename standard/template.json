@@ -38,6 +38,8 @@
       "react-router-dom": "^5.2.0",
       "sort-package-json": "^1.44.0",
       "styled-components": "^5.1.1",
+      "cross-env": "^7.0.2",
+      "ts-node": "^9.0.0",
       "typescript": "^4.0.5",
       "web-vitals": "^0.2.4"
     },
@@ -48,7 +50,9 @@
       "fix:eslint": "npm run lint:eslint -- --fix",
       "fix:prettier": "prettier \"src/**/*.js,jsx,ts,tsx,scss}\" --write",
       "lint": "npm-run-all lint:*",
-      "lint:eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx --cache"
+      "lint:eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx --cache",
+      "upload-build": "cross-env rsync -avPx build/* ${npm_package_name}@${npm_config_host}:~/public/$FOLDER --delete-after",
+      "deploy": "ts-node-transpile-only --script-mode build-tools/scripts/deploy.ts"
     }
   }
 }
