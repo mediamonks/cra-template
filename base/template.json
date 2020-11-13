@@ -24,11 +24,13 @@
       "eslint-plugin-unicorn": "^21.0.0",
       "husky": "^4.2.5",
       "lint-staged": "^10.2.11",
-      "npm-run-all": "^4.1.5",
       "prettier": "^2.0.5",
       "react": "^16.13.1",
       "react-dom": "^16.13.1",
       "sort-package-json": "^1.44.0",
+      "npm-run-all": "^4.1.5",
+      "cross-env": "^7.0.2",
+      "ts-node": "^9.0.0",
       "typescript": "^4.0.5",
       "web-vitals": "^0.2.4"
     },
@@ -38,7 +40,9 @@
       "fix:eslint": "npm run lint:eslint -- --fix",
       "fix:prettier": "prettier \"src/**/*.js,jsx,ts,tsx,scss}\" --write",
       "lint": "npm-run-all lint:*",
-      "lint:eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx --cache"
+      "lint:eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx --cache",
+      "upload-build": "cross-env rsync -avPx build/* ${npm_package_name}@${npm_config_host}:~/public/$FOLDER --delete-after",
+      "deploy": "ts-node-transpile-only --script-mode build-tools/scripts/deploy.ts"
     }
   }
 }
