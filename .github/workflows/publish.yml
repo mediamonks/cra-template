@@ -3,6 +3,9 @@ on: push
 jobs:
   publish:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        variant-dir: ['base', 'standard']
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
@@ -12,3 +15,4 @@ jobs:
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
+          package: ${{ matrix.variant-dir }}/package.json

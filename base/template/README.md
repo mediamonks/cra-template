@@ -1,5 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app),
-using the [MM base template](https://github.com/mediamonks/cra-template)
+This project was bootstrapped with
+[Create React App](https://github.com/mediamonks/create-react-app), using the
+[MM base template](https://github.com/mediamonks/cra-template)
+
+# Post setup
+
+To use the deployment script add the following to your **package.json**:
+
+```json
+"config": {
+    "host": "replace_me_with_your_host_name",
+}
+```
 
 ## Available Scripts
 
