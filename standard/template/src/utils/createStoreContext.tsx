@@ -4,27 +4,26 @@ import React, {
   FunctionComponent,
   Context,
   useContext,
+  useState,
 } from 'react';
-import useStoreFactory from '../hooks/useStoreFactory';
 
 /**
  * Creates a context for the store created by the passed `storeFactory`.
  * Additionally returns the `Provider` component and the hook for the created store's context.
  *
- * @param name - name of the store
  * @param storeFactory - a function that returns an object representing the store
  */
-const createStoreContext = <TStore extends Record<string, unknown>>(
-  name: string,
-  storeFactory: () => TStore,
-): [FunctionComponent<unknown>, () => TStore, Context<TStore>] => {
-  const context = createContext<TStore>({} as TStore); // the initial value is only to satisfy TS and won't be used
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/naming-convention
+const createStoreContext = <T extends Record<string, any>>(Store: {
+  new (): T;
+}): [FunctionComponent<unknown>, () => T, Context<T>] => {
+  const context = createContext<T>({} as T); // the initial value is only to satisfy TS and won't be used
 
   /**
-   * Initializes and contains the context for the `TStore`.
+   * Initializes and contains the context for the `T`.
    */
   function StoreProvider({ children }: PropsWithChildren<unknown>): JSX.Element {
-    const store = useStoreFactory(storeFactory);
+    const [store] = useState(() => new Store());
     return <context.Provider value={store}>{children}</context.Provider>;
   }
 
@@ -34,7 +33,7 @@ const createStoreContext = <TStore extends Record<string, unknown>>(
       return store;
     }
     throw new ReferenceError(
-      `${name} is not initialized, make sure that your component is wrapped in the 'Provider' of the store.`,
+      `${Store.name} is not initialized, make sure that your component is wrapped in the 'Provider' of the store.`,
     );
   };
 

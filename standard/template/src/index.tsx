@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { configure } from 'mobx';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import App from './App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStoreProvider } from './GlobalStore';
 import GlobalStyle from './GlobalStyle';
