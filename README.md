@@ -1,31 +1,38 @@
-# Base MM Create React App Template
-
----
+# MediaMonks Create React App Templates
 
 ## Usage
 
-This template is designed to be used together with our [custom react-scripts](https://github.com/mediamonks/create-react-app).
-It is meant to provide only the basic utilities and configuration of commonly used MM tools.
-
-> npx
-
-```shell
-npx create-react-app my-app --scripts-version @mediamonks/react-scripts --template @mediamonks
-```
-
-> yarn
+The `yarn create react-app` command can be used to instantiate a new project. The `react-scripts` and [template](#Templates) must be augmented with our custom versions.
 
 ```shell
 yarn create react-app my-app --scripts-version @mediamonks/react-scripts --template @mediamonks
+
+# OR
+
+yarn create react-app my-app --scripts-version @mediamonks/react-scripts --template @mediamonks/standard
 ```
 
-## Differences to CRA
+## Templates
 
-| Addition                           | Reasoning                                                                                                                                                                                                                                              |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Cypress](https://www.cypress.io/) | A modern E2E testing tool, essential for larger projects which have lots of moving parts                                                                                                                                                               |
-| polyfill splitting                 | Modern browsers are used by at least 90% of our _general_ user base. In order to decrease loading times for these users, we load the polyfills only for browsers which need them. The polyfill chunk will only be loaded via `<script nomodule .../>`. |
-| `TYPE_CHECK` env                   | There exist cases where we don't want webpack to constantly typecheck and alert us to typing errors/warnings. By default this flag is enabled and can be disabled by creating a `.env` file in the root of the project and adding `TYPE_CHECK=false`   |
+### [base]("./base/template.json")
+
+Exactly the same as the default CRA TypeScript template, but with some additional MM specific standards and tooling.
+
+### [standard]("./standard/template.json")
+
+The "best practices" template. It extends the base template, contains additional libraries and boilerplate selected to provide optimal developer experience.
+
+- [cypress](https://www.cypress.io/), a modern E2E testing tool, essential for larger projects with a lot of moving parts.
+
+## react-scripts
+
+The templates have been designed to be used with our [custom react-scripts](https://github.com/mediamonks/create-react-app).
+
+### Differences to CRA
+
+| Addition         | Reasoning                                                                                                                                                                                                                                            |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TYPE_CHECK` env | There exist cases where we don't want webpack to constantly typecheck and alert us to typing errors/warnings. By default this flag is enabled and can be disabled by creating a `.env` file in the root of the project and adding `TYPE_CHECK=false` |
 
 | Change                                                                       | Reasoning                                                                                                                                                              |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
