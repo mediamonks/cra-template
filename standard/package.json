@@ -1,0 +1,28 @@
+{
+  "name": "@mediamonks/cra-template-standard",
+  "version": "1.0.8",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript",
+    "mediamonks"
+  ],
+  "description": "The MM template for Create React App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mediamonks/cra-template.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
+  "bugs": {
+    "url": "https://github.com/mediamonks/cra-template/issues"
+  },
+  "main": "template.json",
+  "files": [
+    "template",
+    "template.json"
+  ]
+}

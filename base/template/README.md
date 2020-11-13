@@ -1,5 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app),
-using the [MM base template](https://github.com/mediamonks/cra-template)
+This project was bootstrapped with
+[Create React App](https://github.com/mediamonks/create-react-app), using the
+[MM base template](https://github.com/mediamonks/cra-template)
 
 ## Available Scripts
 
