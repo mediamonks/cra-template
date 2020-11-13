@@ -1,10 +1,14 @@
 # Contributing
 
-## Merging the base template into other templates
+## Base Template Workflow
 
-In order to make the process of updating templates which extend the base template easier. We use `git merge-file` with an `.empty` file.
+Templates such as `standard` extend the `base` template and as such, need to reflect any and all changes that `base` receives.
+In general it is recommended to first implement a new feature in the `base` template and then update each template with its own "merge" commit.
 
-> example, merging the `template.json` files:
+- For features, which add new files/folders it is recommended to after the feature is implemented and tested, to simply use the `cp` command to update other templates.
+- For fixes or features, which require modifying existing files the `git merge-file` command can be used to use `git` in the process of merging in new changes. As `git merge-file` is a 3 way merge, we have `.empty` file to facilitate merging just 2.
+
+> example for merging the `template.json` file:
 
 ```shell
 git merge-file standard/template.json .empty base/template.json
