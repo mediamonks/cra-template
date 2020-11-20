@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from '../components/Counter';
+import Counter from '../organisms/Counter';
 
 export default function Home(): JSX.Element {
   return (
