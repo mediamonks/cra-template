@@ -7,7 +7,7 @@ export const [GlobalStoreProvider, useGlobalStore] = createStoreContext(
 
     public constructor() {
       // NOTE: don't add anything else here  unless you know what you are doing
-      // as the constructor will be executed twice due to `React.StrictMode`
+      // as the constructor will be executed twice due to `StrictMode`
       makeAutoObservable(this);
     }
 

@@ -1,7 +1,6 @@
-import React, { PropsWithChildren } from 'react';
+import type { PropsWithChildren, ComponentType } from 'react';
 
 import type { Story } from '@storybook/react';
-import type { ComponentType } from 'react';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention, @typescript-eslint/ban-types
 export function createTemplate<P extends {}>(Component: ComponentType<P>): Story<P> {

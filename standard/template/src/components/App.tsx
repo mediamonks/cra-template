@@ -1,4 +1,3 @@
-import React from 'react';
 import Routes from './pages/Routes';
 import Navigation from './organisms/Navigation';
 import { StyledMainContent } from './App.styles';

@@ -1,11 +1,11 @@
-import React, { forwardRef, PropsWithChildren, Ref } from 'react';
+import { ComponentType, forwardRef, PropsWithChildren, Ref } from 'react';
 
 import { StyledHeading, StyledHeadingProps } from './Heading.styles';
 
 export type HeadingProps = StyledHeadingProps & {
   /* eslint-disable @typescript-eslint/no-explicit-any */
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
-  forwardedAs?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
+  as?: keyof JSX.IntrinsicElements | ComponentType<any>;
+  forwardedAs?: keyof JSX.IntrinsicElements | ComponentType<any>;
   /* eslint-enable  */
 };
 

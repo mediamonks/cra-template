@@ -1,4 +1,3 @@
-import React from 'react';
 import { Styled{{name_pc}} } from './{{name_pc}}.styles';
 
 type {{name_pc}}Props = {};

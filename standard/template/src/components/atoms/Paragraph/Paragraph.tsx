@@ -1,4 +1,4 @@
-import React, { forwardRef, PropsWithChildren, Ref } from 'react';
+import { forwardRef, PropsWithChildren, Ref } from 'react';
 
 import { StyledParagraph, StyledParagraphProps } from './Paragraph.styles';
 

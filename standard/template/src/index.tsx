@@ -1,4 +1,4 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { configure } from 'mobx';
 import { BrowserRouter } from 'react-router-dom';
@@ -19,7 +19,7 @@ configure({
 /** RENDER */
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GlobalStoreProvider>
@@ -30,7 +30,7 @@ ReactDOM.render(
         </GlobalStoreProvider>
       </ThemeProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </StrictMode>,
   // eslint-disable-next-line unicorn/prefer-query-selector
   document.getElementById('root'),
 );

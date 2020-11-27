@@ -22,5 +22,7 @@ module.exports = {
       },
     ],
     'react/jsx-props-no-spreading': 'off',
+    // no longer needed with the new JSX transform
+    'react/react-in-jsx-scope': 'off',
   },
 };

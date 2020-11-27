@@ -1,4 +1,3 @@
-import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { StyledNav, StyledNavItem } from './Navigation.styles';
 import Heading from '../../atoms/Heading';

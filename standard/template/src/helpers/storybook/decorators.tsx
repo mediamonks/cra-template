@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import type { Story } from '@storybook/react';
 import theme from '../../config/theme';
