@@ -1,6 +1,4 @@
-import type { FunctionComponent } from 'react';
-
-const App: FunctionComponent = () => {
+export default function App() {
   return (
     <div>
       <p>
@@ -8,6 +6,4 @@ const App: FunctionComponent = () => {
       </p>
     </div>
   );
-};
-
-export default App;
+}
