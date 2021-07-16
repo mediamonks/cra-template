@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -8,6 +7,14 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
+
+  <% if(process.env.NODE_ENV === 'development') { %>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'sha256-+OVgFCkyF2/rZ6qyfsNnIisCRI6dtMZw3w0Y4xiYagw=' 'strict-dynamic' https: 'unsafe-inline'; object-src 'none'; base-uri 'none';">
+  <% } %>
+
+  <% for (var chunk in htmlWebpackPlugin.files.js) { %>
+  <meta name="app-script" content="<%= htmlWebpackPlugin.files.js[chunk]%>" />
+  <% } %>
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -23,18 +30,23 @@
     -->
   <title>React App</title>
 </head>
-
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-</body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<!--
+    This HTML file is a template.
+    If you open it directly in the browser, you will see an empty page.
+    You can add webfonts, meta tags, or analytics to this file.
+    The build step will place the bundled scripts into the <body> tag.
+    To begin the development, run `npm start` or `yarn start`.
+    To create a production bundle, use `npm run build` or `yarn build`.
+  -->
 
+<script>!function(){for(var o=document.querySelectorAll('html > head > meta[name="app-script"]'),t=0;t<o.length;t++){var e=o[t].getAttribute("content"),n=document.createElement("script");n.src=e,n.src.substr(0,window.location.origin.length)!==window.location.origin?window.console&&console.error("[ScriptLoader] Cannot load "+e+"."):document.body.appendChild(n)}}()</script>
+
+<% if(process.env.NODE_ENV === 'development') { %>
+<!-- workaround to skip cra automatic script injection -->
+<!-- </body></html>-->
+<% } %>
+</body>
 </html>
