@@ -31,7 +31,8 @@
       "lint": "npm-run-all lint:*",
       "lint:eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx --cache",
       "upload-build": "cross-env rsync -avPx build/* ${npm_package_name}@${npm_config_host}:~/public/$FOLDER --delete-after",
-      "deploy": "ts-node-transpile-only --script-mode build-tools/scripts/deploy.ts"
+      "deploy": "ts-node-transpile-only --script-mode build-tools/scripts/deploy.ts",
+      "postbuild": "ts-node-transpile-only --script-mode build-tools/scripts/clean-index-template.ts"
     }
   }
 }
